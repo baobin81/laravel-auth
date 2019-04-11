@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ Auth::user()->name }}'s' Homepage
+    {{ Auth::user()->name }}'的'主页
 @endsection
 
 @section('template_fastload_css')
