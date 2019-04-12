@@ -21,6 +21,7 @@ class EventServiceProvider extends ServiceProvider
             'SocialiteProviders\Twitch\TwitchExtendSocialite@handle',
             'SocialiteProviders\Instagram\InstagramExtendSocialite@handle',
             'SocialiteProviders\ThirtySevenSignals\ThirtySevenSignalsExtendSocialite@handle',
+            'SocialiteProviders\WeixinWeb\WeixinWebExtendSocialite@handle',
         ],
     ];
 

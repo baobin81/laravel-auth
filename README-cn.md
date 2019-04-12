@@ -1,108 +1,6 @@
 ## Laravel-Auth
 
 #### Laravel-Auth is a Complete Build of Laravel 5.8 with Email Registration Verification, Social Authentication, User Roles and Permissions, User Profiles, and Admin restricted user management system. Built on Bootstrap 4.
-[![Build Status](https://travis-ci.org/jeremykenedy/laravel-auth.svg?branch=master)](https://travis-ci.org/jeremykenedy/laravel-auth)
-[![StyleCI](https://styleci.io/repos/44714043/shield?branch=master)](https://styleci.io/repos/44714043)
-[![Build Status](https://scrutinizer-ci.com/g/jeremykenedy/laravel-auth/badges/build.png?b=master)](https://scrutinizer-ci.com/g/jeremykenedy/laravel-auth/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jeremykenedy/laravel-auth/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jeremykenedy/laravel-auth/?branch=master)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/jeremykenedy/laravel-auth/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
- ### Sponsor
- <table>
-     <tr>
-         <td>
-             <img src="https://s3.amazonaws.com/sponsers/sponsor-logo.png" alt="Auth0"> 
-         </td>
-         <td>
-             If you want to quickly add secure token-based authentication to Laravel apps, feel free to check Auth0's Laravel SDK and free plan at <a href="https://auth0.com/overview?utm_source=GHsponsor&utm_medium=GHsponsor&utm_campaign=laravel-auth&utm_content=auth" target="_blank">https://auth0.com/overview</a>.    
-         </td>
-     </tr>
- </table>
-
-<a href="https://www.patreon.com/bePatron?u=10119959" title="Become a Patreon">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patreon" width="120px" > 
-</a>
-
-#### Table of contents
-- [About](#about)
-- [Features](#features)
-- [Installation Instructions](#installation-instructions)
-    - [Build the Front End Assets with Mix](#build-the-front-end-assets-with-mix)
-    - [Optionally Build Cache](#optionally-build-cache)
-- [Seeds](#seeds)
-    - [Seeded Roles](#seeded-roles)
-    - [Seeded Permissions](#seeded-permissions)
-    - [Seeded Users](#seeded-users)
-    - [Themes Seed List](#themes-seed-list)
-- [Routes](#routes)
-- [Socialite](#socialite)
-    - [Get Socialite Login API Keys](#get-socialite-login-api-keys)
-    - [Add More Socialite Logins](#add-more-socialite-logins)
-- [Other API keys](#other-api-keys)
-- [Environment File](#environment-file)
-- [Updates](#updates)
-- [Screenshots](#screenshots)
-- [File Tree](#file-tree)
-- [Opening an Issue](#opening-an-issue)
-- [Laravel Auth License](#laravel-auth-license)
-- [Contributors](#Contributors)
-
-### About
-Laravel 5.8 with user authentication, registration with email confirmation, social media authentication, password recovery, and captcha protection. Uses official [Bootstrap 4](https://getbootstrap.com). This also makes full use of Controllers for the routes, templates for the views, and makes use of middleware for routing. Project can be stood up in minutes.
-
-### Features
-#### A [Laravel](https://laravel.com/) 5.8.x with minimal [Bootstrap](https://getbootstrap.com) 4.0.x project.
-
-| Laravel-Auth Features  |
-| :------------ |
-|Built on [Laravel](https://laravel.com/) 5.8|
-|Built on [Bootstrap](https://getbootstrap.com/) 4|
-|Uses [MySQL](https://github.com/mysql) Database (can be changed)|
-|Uses [Artisan](https://laravel.com/docs/5.8/artisan) to manage database migration, schema creations, and create/publish page controller templates|
-|Dependencies are managed with [COMPOSER](https://getcomposer.org/)|
-|Laravel Scaffolding **User** and **Administrator Authentication**.|
-|User [Socialite Logins](https://github.com/laravel/socialite) ready to go - See API list used below|
-|[Google Maps API v3](https://developers.google.com/maps/documentation/javascript/) for User Location lookup and Geocoding|
-|CRUD (Create, Read, Update, Delete) Themes Management|
-|CRUD (Create, Read, Update, Delete) User Management|
-|Robust [Laravel Logging](https://laravel.com/docs/5.8/errors#logging) with admin UI using MonoLog|
-|Google [reCaptcha Protection with Google API](https://developers.google.com/recaptcha/)|
-|User Registration with email verification|
-|Makes use of Laravel [Mix](https://laravel.com/docs/5.8/mix) to compile assets|
-|Makes use of [Language Localization Files](https://laravel.com/docs/5.8/localization)|
-|Active Nav states using [Laravel Requests](https://laravel.com/docs/5.8/requests)|
-|Restrict User Email Activation Attempts|
-|Capture IP to users table upon signup|
-|Uses [Laravel Debugger](https://github.com/barryvdh/laravel-debugbar) for development|
-|Makes use of [Password Strength Meter](https://github.com/elboletaire/password-strength-meter)|
-|Makes use of [hideShowPassword](https://github.com/cloudfour/hideShowPassword)|
-|User Avatar Image AJAX Upload with [Dropzone.js](https://www.dropzonejs.com/#configuration)|
-|User Gravatar using [Gravatar API](https://github.com/creativeorange/gravatar)|
-|User Password Reset via Email Token|
-|User Login with remember password|
-|User [Roles/ACL Implementation](https://github.com/jeremykenedy/laravel-roles)|
-|Makes use of [Laravel's Soft Delete Structure](https://laravel.com/docs/5.8/eloquent#soft-deleting)|
-|Soft Deleted Users Management System|
-|Permanently Delete Soft Deleted Users|
-|User Delete Account with Goodbye email|
-|User Restore Deleted Account Token|
-|Restore Soft Deleted Users|
-|View Soft Deleted Users|
-|Captures Soft Delete Date|
-|Captures Soft Delete IP|
-|Admin Routing Details UI|
-|Admin PHP Information UI|
-|Eloquent user profiles|
-|User Themes|
-|404 Page|
-|403 Page|
-|Configurable Email Notification via [Laravel-Exception-Notifier](https://github.com/jeremykenedy/laravel-exception-notifier)|
-|Activity Logging using [Laravel-logger](https://github.com/jeremykenedy/laravel-logger)|
-|Optional 2-step account login verfication with [Laravel 2-Step Verification](https://github.com/jeremykenedy/laravel2step)|
-|Uses [Laravel PHP Info](https://github.com/jeremykenedy/laravel-phpinfo) package|
-|Uses [Laravel Blocker](https://github.com/jeremykenedy/laravel-blocker) package|
 
 ### Installation Instructions
 1. Run `git clone https://github.com/jeremykenedy/laravel-auth.git laravel-auth`
@@ -136,151 +34,6 @@ php artisan vendor:publish --tag=laravel2step
 
 ###### And thats it with the caveat of setting up and configuring your development environment. I recommend [Laravel Homestead](https://laravel.com/docs/5.8/homestead)
 
-### Seeds
-##### Seeded Roles
-  * Unverified - Level 0
-  * User  - Level 1
-  * Administrator - Level 5
-
-##### Seeded Permissions
-  * view.users
-  * create.users
-  * edit.users
-  * delete.users
-
-##### Seeded Users
-
-|Email|Password|Access|
-|:------------|:------------|:------------|
-|user@user.com|password|User Access|
-|admin@admin.com|password|Admin Access|
-
-##### Themes Seed List
-  * [ThemesTableSeeder](https://github.com/jeremykenedy/laravel-auth/blob/master/database/seeds/ThemesTableSeeder.php)
-  * NOTE: A lot of themes render incorrectly on Bootstrap 4 since their core was built to override Bootstrap 4. These will be updated soon and ones that do not render correctly will be removed from the seed. In the mean time you can remove them from the seed or manaully from the UI or database.
-
-##### Blocked Types Seed List
-  * [BlockedTypeTableSeeder.php](https://github.com/jeremykenedy/laravel-auth/blob/master/database/seeds/BlockedTypeTableSeeder.php)
-
-|Slug|Name|
-|:------------|:------------|
-|email|E-mail|
-|ipAddress|IP Address|
-|domain|Domain Name|
-|user|User|
-|city|City|
-|state|State|
-|country|Country|
-|countryCode|Country Code|
-|continent|Continent|
-|region|Region|
-
-##### Blocked Items Seed List
-  * [BlockedItemsTableSeeder.php](https://github.com/jeremykenedy/laravel-auth/blob/master/database/seeds/BlockedItemsTableSeeder.php)
-
-|Type|Value|Note|
-|:------------|:------------|:------------|
-|domain|test.com|Block all domains/emails @test.com|
-|domain|test.ca|Block all domains/emails @test.ca|
-|domain|fake.com|Block all domains/emails @fake.com|
-|domain|example.com|Block all domains/emails @example.com|
-|domain|mailinator.com|Block all domains/emails @mailinator.com|
-
-### Routes
-
-```
-+--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-| Domain | Method                                 | URI                                   | Name                                        | Action                                                                                                  | Middleware                                                   |
-+--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-|        | GET|HEAD                               | /                                     | welcome                                     | App\Http\Controllers\WelcomeController@welcome                                                          | web,checkblocked                                             |
-|        | GET|HEAD                               | _debugbar/assets/javascript           | debugbar.assets.js                          | Barryvdh\Debugbar\Controllers\AssetController@js                                                        | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
-|        | GET|HEAD                               | _debugbar/assets/stylesheets          | debugbar.assets.css                         | Barryvdh\Debugbar\Controllers\AssetController@css                                                       | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
-|        | DELETE                                 | _debugbar/cache/{key}/{tags?}         | debugbar.cache.delete                       | Barryvdh\Debugbar\Controllers\CacheController@delete                                                    | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
-|        | GET|HEAD                               | _debugbar/clockwork/{id}              | debugbar.clockwork                          | Barryvdh\Debugbar\Controllers\OpenHandlerController@clockwork                                           | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
-|        | GET|HEAD                               | _debugbar/open                        | debugbar.openhandler                        | Barryvdh\Debugbar\Controllers\OpenHandlerController@handle                                              | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
-|        | GET|HEAD                               | _debugbar/telescope/{id}              | debugbar.telescope                          | Barryvdh\Debugbar\Controllers\TelescopeController@show                                                  | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
-|        | GET|HEAD                               | activate                              | activate                                    | App\Http\Controllers\Auth\ActivateController@initial                                                    | web,activity,checkblocked,auth                               |
-|        | GET|HEAD                               | activate/{token}                      | authenticated.activate                      | App\Http\Controllers\Auth\ActivateController@activate                                                   | web,activity,checkblocked,auth                               |
-|        | GET|HEAD                               | activation                            | authenticated.activation-resend             | App\Http\Controllers\Auth\ActivateController@resend                                                     | web,activity,checkblocked,auth                               |
-|        | GET|HEAD                               | activation-required                   | activation-required                         | App\Http\Controllers\Auth\ActivateController@activationRequired                                         | web,auth,activated,activity,checkblocked                     |
-|        | GET|HEAD                               | active-users                          |                                             | App\Http\Controllers\AdminDetailsController@activeUsers                                                 | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | activity                              | activity                                    | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showAccessLog                   | web,auth,activity,role:admin                                 |
-|        | DELETE                                 | activity/clear-activity               | clear-activity                              | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@clearActivityLog                | web,auth,activity,role:admin                                 |
-|        | GET|HEAD                               | activity/cleared                      | cleared                                     | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showClearedActivityLog          | web,auth,activity,role:admin                                 |
-|        | GET|HEAD                               | activity/cleared/log/{id}             |                                             | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showClearedAccessLogEntry       | web,auth,activity,role:admin                                 |
-|        | DELETE                                 | activity/destroy-activity             | destroy-activity                            | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@destroyActivityLog              | web,auth,activity,role:admin                                 |
-|        | GET|HEAD                               | activity/log/{id}                     |                                             | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showAccessLogEntry              | web,auth,activity,role:admin                                 |
-|        | POST                                   | activity/restore-log                  | restore-activity                            | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@restoreClearedActivityLog       | web,auth,activity,role:admin                                 |
-|        | POST                                   | avatar/upload                         | avatar.upload                               | App\Http\Controllers\ProfilesController@upload                                                          | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | GET|HEAD                               | blocker                               | laravelblocker::blocker.index               | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@index                         | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | POST                                   | blocker                               | laravelblocker::blocker.store               | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@store                         | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | GET|HEAD                               | blocker-deleted                       | laravelblocker::blocker-deleted             | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@index                  | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | DELETE                                 | blocker-deleted-destroy-all           | laravelblocker::destroy-all-blocked         | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroyAllItems        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | POST                                   | blocker-deleted-restore-all           | laravelblocker::blocker-deleted-restore-all | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreAllBlockedItems | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | PUT                                    | blocker-deleted/{id}                  | laravelblocker::blocker-item-restore        | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreBlockedItem     | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | GET|HEAD                               | blocker-deleted/{id}                  | laravelblocker::blocker-item-show-deleted   | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@show                   | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | DELETE                                 | blocker-deleted/{id}                  | laravelblocker::blocker-item-destroy        | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroy                | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | GET|HEAD                               | blocker/create                        | laravelblocker::blocker.create              | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@create                        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | PUT|PATCH                              | blocker/{blocker}                     | laravelblocker::blocker.update              | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@update                        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | DELETE                                 | blocker/{blocker}                     | laravelblocker::blocker.destroy             | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@destroy                       | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | GET|HEAD                               | blocker/{blocker}                     | laravelblocker::blocker.show                | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@show                          | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | GET|HEAD                               | blocker/{blocker}/edit                | laravelblocker::blocker.edit                | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@edit                          | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | GET|POST|HEAD                          | broadcasting/auth                     |                                             | Illuminate\Broadcasting\BroadcastController@authenticate                                                | web                                                          |
-|        | GET|HEAD                               | exceeded                              | exceeded                                    | App\Http\Controllers\Auth\ActivateController@exceeded                                                   | web,activity,checkblocked,auth                               |
-|        | GET|HEAD                               | home                                  | public.home                                 | App\Http\Controllers\UserController@index                                                               | web,auth,activated,activity,twostep,checkblocked             |
-|        | GET|HEAD                               | images/profile/{id}/avatar/{image}    |                                             | App\Http\Controllers\ProfilesController@userProfileAvatar                                               | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | GET|HEAD                               | login                                 | login                                       | App\Http\Controllers\Auth\LoginController@showLoginForm                                                 | web,guest                                                    |
-|        | POST                                   | login                                 |                                             | App\Http\Controllers\Auth\LoginController@login                                                         | web,guest                                                    |
-|        | GET|HEAD                               | logout                                | logout                                      | App\Http\Controllers\Auth\LoginController@logout                                                        | web,auth,activated,activity,checkblocked                     |
-|        | POST                                   | logout                                | logout                                      | App\Http\Controllers\Auth\LoginController@logout                                                        | web                                                          |
-|        | GET|HEAD                               | logs                                  |                                             | Rap2hpoutre\LaravelLogViewer\LogViewerController@index                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | POST                                   | password/email                        | password.email                              | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail                                   | web,guest                                                    |
-|        | POST                                   | password/reset                        | password.update                             | App\Http\Controllers\Auth\ResetPasswordController@reset                                                 | web,guest                                                    |
-|        | GET|HEAD                               | password/reset                        | password.request                            | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm                                  | web,guest                                                    |
-|        | GET|HEAD                               | password/reset/{token}                | password.reset                              | App\Http\Controllers\Auth\ResetPasswordController@showResetForm                                         | web,guest                                                    |
-|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | php                                   |                                             | Illuminate\Routing\RedirectController                                                                   | web                                                          |
-|        | GET|HEAD                               | phpinfo                               | laravelPhpInfo::phpinfo                     | jeremykenedy\LaravelPhpInfo\App\Http\Controllers\LaravelPhpInfoController@phpinfo                       | web,auth,activated,role:admin,activity,twostep               |
-|        | GET|HEAD                               | profile/create                        | profile.create                              | App\Http\Controllers\ProfilesController@create                                                          | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | PUT|PATCH                              | profile/{profile}                     | profile.update                              | App\Http\Controllers\ProfilesController@update                                                          | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | GET|HEAD                               | profile/{profile}                     | profile.show                                | App\Http\Controllers\ProfilesController@show                                                            | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | GET|HEAD                               | profile/{profile}/edit                | profile.edit                                | App\Http\Controllers\ProfilesController@edit                                                            | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | GET|HEAD                               | profile/{username}                    | {username}                                  | App\Http\Controllers\ProfilesController@show                                                            | web,auth,activated,activity,twostep,checkblocked             |
-|        | DELETE                                 | profile/{username}/deleteUserAccount  | {username}                                  | App\Http\Controllers\ProfilesController@deleteUserAccount                                               | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | PUT                                    | profile/{username}/updateUserAccount  | {username}                                  | App\Http\Controllers\ProfilesController@updateUserAccount                                               | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | PUT                                    | profile/{username}/updateUserPassword | {username}                                  | App\Http\Controllers\ProfilesController@updateUserPassword                                              | web,auth,activated,currentUser,activity,twostep,checkblocked |
-|        | GET|HEAD                               | re-activate/{token}                   | user.reactivate                             | App\Http\Controllers\RestoreUserController@userReActivate                                               | web,activity,checkblocked                                    |
-|        | POST                                   | register                              |                                             | App\Http\Controllers\Auth\RegisterController@register                                                   | web,guest                                                    |
-|        | GET|HEAD                               | register                              | register                                    | App\Http\Controllers\Auth\RegisterController@showRegistrationForm                                       | web,guest                                                    |
-|        | GET|HEAD                               | routes                                |                                             | App\Http\Controllers\AdminDetailsController@listRoutes                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | POST                                   | search-blocked                        | laravelblocker::search-blocked              | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@search                        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | POST                                   | search-blocked-deleted                | laravelblocker::search-blocked-deleted      | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@search                 | web,checkblocked,auth,activated,role:admin,activity,twostep  |
-|        | POST                                   | search-users                          | search-users                                | App\Http\Controllers\UsersManagementController@search                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | social/handle/{provider}              | social.handle                               | App\Http\Controllers\Auth\SocialController@getSocialHandle                                              | web,activity,checkblocked                                    |
-|        | GET|HEAD                               | social/redirect/{provider}            | social.redirect                             | App\Http\Controllers\Auth\SocialController@getSocialRedirect                                            | web,activity,checkblocked                                    |
-|        | GET|HEAD                               | themes                                | themes                                      | App\Http\Controllers\ThemesManagementController@index                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | POST                                   | themes                                | themes.store                                | App\Http\Controllers\ThemesManagementController@store                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | themes/create                         | themes.create                               | App\Http\Controllers\ThemesManagementController@create                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | DELETE                                 | themes/{theme}                        | themes.destroy                              | App\Http\Controllers\ThemesManagementController@destroy                                                 | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | PUT|PATCH                              | themes/{theme}                        | themes.update                               | App\Http\Controllers\ThemesManagementController@update                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | themes/{theme}                        | themes.show                                 | App\Http\Controllers\ThemesManagementController@show                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | themes/{theme}/edit                   | themes.edit                                 | App\Http\Controllers\ThemesManagementController@edit                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | POST                                   | users                                 | users.store                                 | App\Http\Controllers\UsersManagementController@store                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | users                                 | users                                       | App\Http\Controllers\UsersManagementController@index                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | users/create                          | users.create                                | App\Http\Controllers\UsersManagementController@create                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | users/deleted                         | deleted.index                               | App\Http\Controllers\SoftDeletesController@index                                                        | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | DELETE                                 | users/deleted/{deleted}               | deleted.destroy                             | App\Http\Controllers\SoftDeletesController@destroy                                                      | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | PUT|PATCH                              | users/deleted/{deleted}               | deleted.update                              | App\Http\Controllers\SoftDeletesController@update                                                       | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | users/deleted/{deleted}               | deleted.show                                | App\Http\Controllers\SoftDeletesController@show                                                         | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | DELETE                                 | users/{user}                          | user.destroy                                | App\Http\Controllers\UsersManagementController@destroy                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | PUT|PATCH                              | users/{user}                          | users.update                                | App\Http\Controllers\UsersManagementController@update                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | users/{user}                          | users.show                                  | App\Http\Controllers\UsersManagementController@show                                                     | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | users/{user}/edit                     | users.edit                                  | App\Http\Controllers\UsersManagementController@edit                                                     | web,auth,activated,role:admin,activity,twostep,checkblocked  |
-|        | GET|HEAD                               | verification/needed                   | laravel2step::verificationNeeded            | jeremykenedy\laravel2step\App\Http\Controllers\TwoStepController@showVerification                       | web,auth,Closure                                             |
-|        | POST                                   | verification/resend                   | laravel2step::resend                        | jeremykenedy\laravel2step\App\Http\Controllers\TwoStepController@resend                                 | web,auth,Closure                                             |
-|        | POST                                   | verification/verify                   | laravel2step::verify                        | jeremykenedy\laravel2step\App\Http\Controllers\TwoStepController@verify                                 | web,auth,Closure                                             |
-+--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-```
-
 ### Socialite
 
 #### Get Socialite Login API Keys:
@@ -296,11 +49,14 @@ php artisan vendor:publish --tag=laravel2step
 ##### 国内
 * [QQ API](https://github.com/basecamp/basecamp-classic-api)
 * [weinxin API](https://github.com/basecamp/basecamp-classic-api)
-* [weinxinweb](https://github.com/basecamp/basecamp-classic-api)
-* [支付宝](https://github.com/basecamp/basecamp-classic-api)
-* [百度](https://github.com/basecamp/basecamp-classic-api)
+* [weinxinweb](https://open.weixin.qq.com/)
+* [支付宝](https://github.com/anerg2046/sns_auth)
+* [百度](http://developer.baidu.com/console#app/project)
+ https://github.com/baobin81/ThreeWayLogin
+* [百度地图](http://lbsyun.baidu.com/apiconsole/key/create)
 * [新浪微博](https://github.com/basecamp/basecamp-classic-api)
 * [淘宝](https://github.com/basecamp/basecamp-classic-api)
+https://github.com/baobin81/ThreeWayLogin
 * [京东](https://github.com/basecamp/basecamp-classic-api)
 
 #### Add More Socialite Logins
@@ -350,6 +106,14 @@ php artisan vendor:publish --tag=laravel2step
 
 ### Other API keys
 * [Google Maps API v3 Key](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key)
+* 国内地图
+- [百度](http://lbsyun.baidu.com/)
+- [高德](https://lbs.amap.com/)
+- [腾讯](https://lbs.qq.com/)
+
+### 验证码服务
+- [google recaptcha](https://www.google.com/recaptcha/api.js)
+- [腾讯防水墙](https://007.qq.com/)
 
 ### Environment File
 Example `.env` file:
@@ -530,6 +294,233 @@ INSTAGRAM_REDIRECT_URI=http://laravel-authentication.local/social/handle/instagr
 37SIGNALS_REDIRECT_URI=http://laravel-authentication.local/social/handle/37signals
 
 ```
+#### Table of contents
+- [About](#about)
+- [Features](#features)
+- [Installation Instructions](#installation-instructions)
+    - [Build the Front End Assets with Mix](#build-the-front-end-assets-with-mix)
+    - [Optionally Build Cache](#optionally-build-cache)
+- [Seeds](#seeds)
+    - [Seeded Roles](#seeded-roles)
+    - [Seeded Permissions](#seeded-permissions)
+    - [Seeded Users](#seeded-users)
+    - [Themes Seed List](#themes-seed-list)
+- [Routes](#routes)
+- [Socialite](#socialite)
+    - [Get Socialite Login API Keys](#get-socialite-login-api-keys)
+    - [Add More Socialite Logins](#add-more-socialite-logins)
+- [Other API keys](#other-api-keys)
+- [Environment File](#environment-file)
+- [Updates](#updates)
+- [Screenshots](#screenshots)
+- [File Tree](#file-tree)
+- [Opening an Issue](#opening-an-issue)
+- [Laravel Auth License](#laravel-auth-license)
+- [Contributors](#Contributors)
+
+### About
+Laravel 5.8 with user authentication, registration with email confirmation, social media authentication, password recovery, and captcha procwgtection. Uses official [Bootstrap 4](https://getbootstrap.com). This also makes full use of Controllers for the routes, templates for the views, and makes use of middleware for routing. Project can be stood up in minutes.
+
+### Features
+#### A [Laravel](https://laravel.com/) 5.8.x with minimal [Bootstrap](https://getbootstrap.com) 4.0.x project.
+
+| Laravel-Auth Features  |
+| :------------ |
+|Built on [Laravel](https://laravel.com/) 5.8|
+|Built on [Bootstrap](https://getbootstrap.com/) 4|
+|Uses [MySQL](https://github.com/mysql) Database (can be changed)|
+|Uses [Artisan](https://laravel.com/docs/5.8/artisan) to manage database migration, schema creations, and create/publish page controller templates|
+|Dependencies are managed with [COMPOSER](https://getcomposer.org/)|
+|Laravel Scaffolding **User** and **Administrator Authentication**.|
+|User [Socialite Logins](https://github.com/laravel/socialite) ready to go - See API list used below|
+|[Google Maps API v3](https://developers.google.com/maps/documentation/javascript/) for User Location lookup and Geocoding|
+|CRUD (Create, Read, Update, Delete) Themes Management|
+|CRUD (Create, Read, Update, Delete) User Management|
+|Robust [Laravel Logging](https://laravel.com/docs/5.8/errors#logging) with admin UI using MonoLog|
+|Google [reCaptcha Protection with Google API](https://developers.google.com/recaptcha/)|
+|User Registration with email verification|
+|Makes use of Laravel [Mix](https://laravel.com/docs/5.8/mix) to compile assets|
+|Makes use of [Language Localization Files](https://laravel.com/docs/5.8/localization)|
+|Active Nav states using [Laravel Requests](https://laravel.com/docs/5.8/requests)|
+|Restrict User Email Activation Attempts|
+|Capture IP to users table upon signup|
+|Uses [Laravel Debugger](https://github.com/barryvdh/laravel-debugbar) for development|
+|Makes use of [Password Strength Meter](https://github.com/elboletaire/password-strength-meter)|
+|Makes use of [hideShowPassword](https://github.com/cloudfour/hideShowPassword)|
+|User Avatar Image AJAX Upload with [Dropzone.js](https://www.dropzonejs.com/#configuration)|
+|User Gravatar using [Gravatar API](https://github.com/creativeorange/gravatar)|
+|User Password Reset via Email Token|
+|User Login with remember password|
+|User [Roles/ACL Implementation](https://github.com/jeremykenedy/laravel-roles)|
+|Makes use of [Laravel's Soft Delete Structure](https://laravel.com/docs/5.8/eloquent#soft-deleting)|
+|Soft Deleted Users Management System|
+|Permanently Delete Soft Deleted Users|
+|User Delete Account with Goodbye email|
+|User Restore Deleted Account Token|
+|Restore Soft Deleted Users|
+|View Soft Deleted Users|
+|Captures Soft Delete Date|
+|Captures Soft Delete IP|
+|Admin Routing Details UI|
+|Admin PHP Information UI|
+|Eloquent user profiles|
+|User Themes|
+|404 Page|
+|403 Page|
+|Configurable Email Notification via [Laravel-Exception-Notifier](https://github.com/jeremykenedy/laravel-exception-notifier)|
+|Activity Logging using [Laravel-logger](https://github.com/jeremykenedy/laravel-logger)|
+|Optional 2-step account login verfication with [Laravel 2-Step Verification](https://github.com/jeremykenedy/laravel2step)|
+|Uses [Laravel PHP Info](https://github.com/jeremykenedy/laravel-phpinfo) package|
+|Uses [Laravel Blocker](https://github.com/jeremykenedy/laravel-blocker) package|
+
+
+
+### Seeds
+##### Seeded Roles
+  * Unverified - Level 0
+  * User  - Level 1
+  * Administrator - Level 5
+
+##### Seeded Permissions
+  * view.users
+  * create.users
+  * edit.users
+  * delete.users
+
+##### Seeded Users
+
+|Email|Password|Access|
+|:------------|:------------|:------------|
+|user@user.com|password|User Access|
+|admin@admin.com|password|Admin Access|
+
+##### Themes Seed List
+  * [ThemesTableSeeder](https://github.com/jeremykenedy/laravel-auth/blob/master/database/seeds/ThemesTableSeeder.php)
+  * NOTE: A lot of themes render incorrectly on Bootstrap 4 since their core was built to override Bootstrap 4. These will be updated soon and ones that do not render correctly will be removed from the seed. In the mean time you can remove them from the seed or manaully from the UI or database.
+
+##### Blocked Types Seed List
+  * [BlockedTypeTableSeeder.php](https://github.com/jeremykenedy/laravel-auth/blob/master/database/seeds/BlockedTypeTableSeeder.php)
+
+|Slug|Name|
+|:------------|:------------|
+|email|E-mail|
+|ipAddress|IP Address|
+|domain|Domain Name|
+|user|User|
+|city|City|
+|state|State|
+|country|Country|
+|countryCode|Country Code|
+|continent|Continent|
+|region|Region|
+
+##### Blocked Items Seed List
+  * [BlockedItemsTableSeeder.php](https://github.com/jeremykenedy/laravel-auth/blob/master/database/seeds/BlockedItemsTableSeeder.php)
+
+|Type|Value|Note|
+|:------------|:------------|:------------|
+|domain|test.com|Block all domains/emails @test.com|
+|domain|test.ca|Block all domains/emails @test.ca|
+|domain|fake.com|Block all domains/emails @fake.com|
+|domain|example.com|Block all domains/emails @example.com|
+|domain|mailinator.com|Block all domains/emails @mailinator.com|
+
+### Routes
+
+```
++--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+| Domain | Method                                 | URI                                   | Name                                        | Action                                                                                                  | Middleware                                                   |
++--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+|        | GET|HEAD                               | /                                     | welcome                                     | App\Http\Controllers\WelcomeController@welcome                                                          | web,checkblocked                                             |
+|        | GET|HEAD                               | _debugbar/assets/javascript           | debugbar.assets.js                          | Barryvdh\Debugbar\Controllers\AssetController@js                                                        | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
+|        | GET|HEAD                               | _debugbar/assets/stylesheets          | debugbar.assets.css                         | Barryvdh\Debugbar\Controllers\AssetController@css                                                       | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
+|        | DELETE                                 | _debugbar/cache/{key}/{tags?}         | debugbar.cache.delete                       | Barryvdh\Debugbar\Controllers\CacheController@delete                                                    | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
+|        | GET|HEAD                               | _debugbar/clockwork/{id}              | debugbar.clockwork                          | Barryvdh\Debugbar\Controllers\OpenHandlerController@clockwork                                           | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
+|        | GET|HEAD                               | _debugbar/open                        | debugbar.openhandler                        | Barryvdh\Debugbar\Controllers\OpenHandlerController@handle                                              | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
+|        | GET|HEAD                               | _debugbar/telescope/{id}              | debugbar.telescope                          | Barryvdh\Debugbar\Controllers\TelescopeController@show                                                  | Barryvdh\Debugbar\Middleware\DebugbarEnabled,Closure         |
+|        | GET|HEAD                               | activate                              | activate                                    | App\Http\Controllers\Auth\ActivateController@initial                                                    | web,activity,checkblocked,auth                               |
+|        | GET|HEAD                               | activate/{token}                      | authenticated.activate                      | App\Http\Controllers\Auth\ActivateController@activate                                                   | web,activity,checkblocked,auth                               |
+|        | GET|HEAD                               | activation                            | authenticated.activation-resend             | App\Http\Controllers\Auth\ActivateController@resend                                                     | web,activity,checkblocked,auth                               |
+|        | GET|HEAD                               | activation-required                   | activation-required                         | App\Http\Controllers\Auth\ActivateController@activationRequired                                         | web,auth,activated,activity,checkblocked                     |
+|        | GET|HEAD                               | active-users                          |                                             | App\Http\Controllers\AdminDetailsController@activeUsers                                                 | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | activity                              | activity                                    | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showAccessLog                   | web,auth,activity,role:admin                                 |
+|        | DELETE                                 | activity/clear-activity               | clear-activity                              | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@clearActivityLog                | web,auth,activity,role:admin                                 |
+|        | GET|HEAD                               | activity/cleared                      | cleared                                     | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showClearedActivityLog          | web,auth,activity,role:admin                                 |
+|        | GET|HEAD                               | activity/cleared/log/{id}             |                                             | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showClearedAccessLogEntry       | web,auth,activity,role:admin                                 |
+|        | DELETE                                 | activity/destroy-activity             | destroy-activity                            | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@destroyActivityLog              | web,auth,activity,role:admin                                 |
+|        | GET|HEAD                               | activity/log/{id}                     |                                             | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@showAccessLogEntry              | web,auth,activity,role:admin                                 |
+|        | POST                                   | activity/restore-log                  | restore-activity                            | jeremykenedy\LaravelLogger\App\Http\Controllers\LaravelLoggerController@restoreClearedActivityLog       | web,auth,activity,role:admin                                 |
+|        | POST                                   | avatar/upload                         | avatar.upload                               | App\Http\Controllers\ProfilesController@upload                                                          | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | GET|HEAD                               | blocker                               | laravelblocker::blocker.index               | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@index                         | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | POST                                   | blocker                               | laravelblocker::blocker.store               | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@store                         | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | GET|HEAD                               | blocker-deleted                       | laravelblocker::blocker-deleted             | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@index                  | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | DELETE                                 | blocker-deleted-destroy-all           | laravelblocker::destroy-all-blocked         | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroyAllItems        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | POST                                   | blocker-deleted-restore-all           | laravelblocker::blocker-deleted-restore-all | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreAllBlockedItems | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | PUT                                    | blocker-deleted/{id}                  | laravelblocker::blocker-item-restore        | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@restoreBlockedItem     | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | GET|HEAD                               | blocker-deleted/{id}                  | laravelblocker::blocker-item-show-deleted   | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@show                   | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | DELETE                                 | blocker-deleted/{id}                  | laravelblocker::blocker-item-destroy        | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@destroy                | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | GET|HEAD                               | blocker/create                        | laravelblocker::blocker.create              | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@create                        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | PUT|PATCH                              | blocker/{blocker}                     | laravelblocker::blocker.update              | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@update                        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | DELETE                                 | blocker/{blocker}                     | laravelblocker::blocker.destroy             | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@destroy                       | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | GET|HEAD                               | blocker/{blocker}                     | laravelblocker::blocker.show                | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@show                          | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | GET|HEAD                               | blocker/{blocker}/edit                | laravelblocker::blocker.edit                | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@edit                          | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | GET|POST|HEAD                          | broadcasting/auth                     |                                             | Illuminate\Broadcasting\BroadcastController@authenticate                                                | web                                                          |
+|        | GET|HEAD                               | exceeded                              | exceeded                                    | App\Http\Controllers\Auth\ActivateController@exceeded                                                   | web,activity,checkblocked,auth                               |
+|        | GET|HEAD                               | home                                  | public.home                                 | App\Http\Controllers\UserController@index                                                               | web,auth,activated,activity,twostep,checkblocked             |
+|        | GET|HEAD                               | images/profile/{id}/avatar/{image}    |                                             | App\Http\Controllers\ProfilesController@userProfileAvatar                                               | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | GET|HEAD                               | login                                 | login                                       | App\Http\Controllers\Auth\LoginController@showLoginForm                                                 | web,guest                                                    |
+|        | POST                                   | login                                 |                                             | App\Http\Controllers\Auth\LoginController@login                                                         | web,guest                                                    |
+|        | GET|HEAD                               | logout                                | logout                                      | App\Http\Controllers\Auth\LoginController@logout                                                        | web,auth,activated,activity,checkblocked                     |
+|        | POST                                   | logout                                | logout                                      | App\Http\Controllers\Auth\LoginController@logout                                                        | web                                                          |
+|        | GET|HEAD                               | logs                                  |                                             | Rap2hpoutre\LaravelLogViewer\LogViewerController@index                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | POST                                   | password/email                        | password.email                              | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail                                   | web,guest                                                    |
+|        | POST                                   | password/reset                        | password.update                             | App\Http\Controllers\Auth\ResetPasswordController@reset                                                 | web,guest                                                    |
+|        | GET|HEAD                               | password/reset                        | password.request                            | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm                                  | web,guest                                                    |
+|        | GET|HEAD                               | password/reset/{token}                | password.reset                              | App\Http\Controllers\Auth\ResetPasswordController@showResetForm                                         | web,guest                                                    |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | php                                   |                                             | Illuminate\Routing\RedirectController                                                                   | web                                                          |
+|        | GET|HEAD                               | phpinfo                               | laravelPhpInfo::phpinfo                     | jeremykenedy\LaravelPhpInfo\App\Http\Controllers\LaravelPhpInfoController@phpinfo                       | web,auth,activated,role:admin,activity,twostep               |
+|        | GET|HEAD                               | profile/create                        | profile.create                              | App\Http\Controllers\ProfilesController@create                                                          | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | PUT|PATCH                              | profile/{profile}                     | profile.update                              | App\Http\Controllers\ProfilesController@update                                                          | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | GET|HEAD                               | profile/{profile}                     | profile.show                                | App\Http\Controllers\ProfilesController@show                                                            | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | GET|HEAD                               | profile/{profile}/edit                | profile.edit                                | App\Http\Controllers\ProfilesController@edit                                                            | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | GET|HEAD                               | profile/{username}                    | {username}                                  | App\Http\Controllers\ProfilesController@show                                                            | web,auth,activated,activity,twostep,checkblocked             |
+|        | DELETE                                 | profile/{username}/deleteUserAccount  | {username}                                  | App\Http\Controllers\ProfilesController@deleteUserAccount                                               | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | PUT                                    | profile/{username}/updateUserAccount  | {username}                                  | App\Http\Controllers\ProfilesController@updateUserAccount                                               | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | PUT                                    | profile/{username}/updateUserPassword | {username}                                  | App\Http\Controllers\ProfilesController@updateUserPassword                                              | web,auth,activated,currentUser,activity,twostep,checkblocked |
+|        | GET|HEAD                               | re-activate/{token}                   | user.reactivate                             | App\Http\Controllers\RestoreUserController@userReActivate                                               | web,activity,checkblocked                                    |
+|        | POST                                   | register                              |                                             | App\Http\Controllers\Auth\RegisterController@register                                                   | web,guest                                                    |
+|        | GET|HEAD                               | register                              | register                                    | App\Http\Controllers\Auth\RegisterController@showRegistrationForm                                       | web,guest                                                    |
+|        | GET|HEAD                               | routes                                |                                             | App\Http\Controllers\AdminDetailsController@listRoutes                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | POST                                   | search-blocked                        | laravelblocker::search-blocked              | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerController@search                        | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | POST                                   | search-blocked-deleted                | laravelblocker::search-blocked-deleted      | jeremykenedy\LaravelBlocker\App\Http\Controllers\LaravelBlockerDeletedController@search                 | web,checkblocked,auth,activated,role:admin,activity,twostep  |
+|        | POST                                   | search-users                          | search-users                                | App\Http\Controllers\UsersManagementController@search                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | social/handle/{provider}              | social.handle                               | App\Http\Controllers\Auth\SocialController@getSocialHandle                                              | web,activity,checkblocked                                    |
+|        | GET|HEAD                               | social/redirect/{provider}            | social.redirect                             | App\Http\Controllers\Auth\SocialController@getSocialRedirect                                            | web,activity,checkblocked                                    |
+|        | GET|HEAD                               | themes                                | themes                                      | App\Http\Controllers\ThemesManagementController@index                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | POST                                   | themes                                | themes.store                                | App\Http\Controllers\ThemesManagementController@store                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | themes/create                         | themes.create                               | App\Http\Controllers\ThemesManagementController@create                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | DELETE                                 | themes/{theme}                        | themes.destroy                              | App\Http\Controllers\ThemesManagementController@destroy                                                 | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | PUT|PATCH                              | themes/{theme}                        | themes.update                               | App\Http\Controllers\ThemesManagementController@update                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | themes/{theme}                        | themes.show                                 | App\Http\Controllers\ThemesManagementController@show                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | themes/{theme}/edit                   | themes.edit                                 | App\Http\Controllers\ThemesManagementController@edit                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | POST                                   | users                                 | users.store                                 | App\Http\Controllers\UsersManagementController@store                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | users                                 | users                                       | App\Http\Controllers\UsersManagementController@index                                                    | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | users/create                          | users.create                                | App\Http\Controllers\UsersManagementController@create                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | users/deleted                         | deleted.index                               | App\Http\Controllers\SoftDeletesController@index                                                        | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | DELETE                                 | users/deleted/{deleted}               | deleted.destroy                             | App\Http\Controllers\SoftDeletesController@destroy                                                      | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | PUT|PATCH                              | users/deleted/{deleted}               | deleted.update                              | App\Http\Controllers\SoftDeletesController@update                                                       | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | users/deleted/{deleted}               | deleted.show                                | App\Http\Controllers\SoftDeletesController@show                                                         | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | DELETE                                 | users/{user}                          | user.destroy                                | App\Http\Controllers\UsersManagementController@destroy                                                  | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | PUT|PATCH                              | users/{user}                          | users.update                                | App\Http\Controllers\UsersManagementController@update                                                   | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | users/{user}                          | users.show                                  | App\Http\Controllers\UsersManagementController@show                                                     | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | users/{user}/edit                     | users.edit                                  | App\Http\Controllers\UsersManagementController@edit                                                     | web,auth,activated,role:admin,activity,twostep,checkblocked  |
+|        | GET|HEAD                               | verification/needed                   | laravel2step::verificationNeeded            | jeremykenedy\laravel2step\App\Http\Controllers\TwoStepController@showVerification                       | web,auth,Closure                                             |
+|        | POST                                   | verification/resend                   | laravel2step::resend                        | jeremykenedy\laravel2step\App\Http\Controllers\TwoStepController@resend                                 | web,auth,Closure                                             |
+|        | POST                                   | verification/verify                   | laravel2step::verify                        | jeremykenedy\laravel2step\App\Http\Controllers\TwoStepController@verify                                 | web,auth,Closure                                             |
++--------+----------------------------------------+---------------------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+```
+
+
 
 #### Laravel Developement Packages Used References
 * https://laravel.com/docs/5.8/authentication
@@ -580,54 +571,7 @@ INSTAGRAM_REDIRECT_URI=http://laravel-authentication.local/social/handle/instagr
 * Added Google Maps API v3 for User Location Map with Options
 * Added CRUD(Create, Read, Update, Delete) User Management
 
-### Screenshots
-![Login](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/1laravel-auth2-login.jpg)
-![Register](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/2laravel-auth2-register.jpg)
-![Registration Confirmation](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/3laravel-auth2-account-req-activation.jpg)
-![Registration Email](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/4laravel-auth2-activation-email.jpg)
-![Registration Complete](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/5laravel-auth2-userhome-with-flash-success.jpg)
-![Intial User Profile](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/6laravel-auth2-profile-mapless.jpg)
-![Edit User Profile](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/7laravel-auth2-profile-edit.jpg)
-![Find Location Using Google Maps API v3](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/8laravel-auth2-edit-profile-lookup.jpg)
-![Profile Updated](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/9laravel-auth2-flash-success.jpg)
-![Profile Semi-completed](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/10laravel-auth2-profile-with-map.jpg)
 
-![Admin Panel Users List](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/11laravel-auth2-users-list.jpg)
-![Admin Panel Delete User](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/12laravel-auth2-modal-delete.jpg)
-![Admin Panel Flash Error](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/13laravel-auth2-flash-error.jpg)
-![Admin Panel Show User](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/14laravel-auth2-show-edit.jpg)
-![Admin Panel Edit User](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/15laravel-auth2-edit-user.jpg)
-![Admin Panel Save Edits](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/16laravel-auth2-modal-save.jpg)
-![Admin Panel Create User](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/17laravel-auth-create-user.jpg)
-
-![dashboard](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/1-dashboard.jpg)
-![drilldown](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/2-drilldown.jpg)
-![confirm-clear](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/3-confirm-clear.jpg)
-![log-cleared-msg](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/4-log-cleared-msg.jpg)
-![cleared-log](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/5-cleared-log.jpg)
-![confirm-restore](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/5-confirm-restore.jpg)
-![confirm-destroy](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/6-confirm-destroy.jpg)
-![success-destroy](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/7-success-destroy.jpg)
-![success-restored](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/8-success-restored.jpg)
-![cleared-drilldown](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-logger/9-cleared-drilldown.jpg)
-
-![Verification Page](https://s3-us-west-2.amazonaws.com/github-project-images/laravel2step/1-verification-page.jpeg)
-![Resent Email Modal](https://s3-us-west-2.amazonaws.com/github-project-images/laravel2step/2-verification-email-resent.jpeg)
-![Lock Warning Modal](https://s3-us-west-2.amazonaws.com/github-project-images/laravel2step/3-lock-warning.jpeg)
-![Locked Page](https://s3-us-west-2.amazonaws.com/github-project-images/laravel2step/4-lock-screen.jpeg)
-![Verification Email](https://s3-us-west-2.amazonaws.com/github-project-images/laravel2step/5-verification-email.jpeg)
-
-![Laravel Blocker Dashboard](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker0.jpg)
-![Laravel Blocker Search](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker1.jpg)
-![Laravel Blocker Create](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker2.jpg)
-![Laravel Blocker View](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker3.jpg)
-![Laravel Blocker Edit](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker4.jpg)
-![Laravel Blocker Delete Modal](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker5.jpg)
-![Laravel Blocker Deleted Dashboard](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker6.jpg)
-![Laravel Blocker Destroy Modal](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker7.jpg)
-![Laravel Blocker Flash Message](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker8.jpg)
-![Laravel Blocker Restore Modal](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker9.jpg)
-![Laravel Blocker Restore Flash Message](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-blocker/blocker10.jpg)
 
 ### File Tree
 ```

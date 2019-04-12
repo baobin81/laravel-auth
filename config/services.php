@@ -82,5 +82,11 @@ return [
         'client_secret' => env('37SIGNALS_SECRET'),
         'redirect'      => env('37SIGNALS_REDIRECT_URI'),
     ],
+    
+    'weixinweb' => [
+    'client_id' => env('WEIXINWEB_KEY'),
+    'client_secret' => env('WEIXINWEB_SECRET'),
+    'redirect' => env('WEIXINWEB_REDIRECT_URI')
+    ],
 
 ];
