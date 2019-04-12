@@ -900,32 +900,4 @@ laravel-auth
 * Tree command can be installed using brew: `brew install tree`
 * File tree generated using command `tree -a -I '.git|node_modules|vendor|storage|tests'`
 
-### Opening an Issue
-Before opening an issue there are a couple of considerations:
-* A **star** on this project shows support and is way to say thank you to all the contributors. If you open an issue without a star, *your issue may be closed without consideration.* Thank you for understanding and the support. You are all awesome!
-* **Read the instructions** and make sure all steps were *followed correctly*.
-* **Check** that the issue is not *specific to the development environment* setup.
-* **Provide** *duplication steps*.
-* **Attempt to look into the issue**, and if you *have a solution, make a pull request*.
-* **Show that you have made an attempt** to *look into the issue*.
-* **Check** to see if the issue you are *reporting is a duplicate* of a previous reported issue.
-* **Following these instructions show me that you have tried.**
-* If you have a questions send me an email to jeremykenedy@gmail.com
-* Need some help, I can do my best on Slack: https://opensourcehelpgroup.slack.com
-* Please be considerate that this is an open source project that I provide to the community for FREE when opening an issue.
 
-### Laravel Auth License
-Laravel-auth is licensed under the [MIT license](https://opensource.org/licenses/MIT). Enjoy!
-
-### Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/6244570?v=4" width="110px;" alt="Jeremy Kenedy"/><br /><sub><b>Jeremy Kenedy</b></sub>](http://jeremykenedy.github.io/)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=jeremykenedy "Code") [🚧](#maintenance-jeremykenedy "Maintenance") [🎨](#design-jeremykenedy "Design") [🌍](#translation-jeremykenedy "Translation") [📦](#platform-jeremykenedy "Packaging/porting to new platform") | [<img src="https://avatars2.githubusercontent.com/u/3525566?v=4" width="110px;" alt="Manuel Montenegro"/><br /><sub><b>Manuel Montenegro</b></sub>](https://derrochando.com)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=mmonbr "Code") | [<img src="https://avatars1.githubusercontent.com/u/8403417?v=4" width="110px;" alt="VortixDev"/><br /><sub><b>VortixDev</b></sub>](https://github.com/VortixDev)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=VortixDev "Code") | [<img src="https://avatars3.githubusercontent.com/u/2678909?v=4" width="110px;" alt="terzinnorbert"/><br /><sub><b>terzinnorbert</b></sub>](https://github.com/terzinnorbert)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=terzinnorbert "Code") | [<img src="https://avatars1.githubusercontent.com/u/1177629?v=4" width="110px;" alt="Miguel Targa"/><br /><sub><b>Miguel Targa</b></sub>](http://targa.me)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=migueltarga "Code") | [<img src="https://avatars0.githubusercontent.com/u/4694803?v=4" width="110px;" alt="Chris Pappas"/><br /><sub><b>Chris Pappas</b></sub>](https://github.com/chrispappas)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=chrispappas "Code") | [<img src="https://avatars3.githubusercontent.com/u/18594097?v=4" width="110px;" alt="Hussam"/><br /><sub><b>Hussam</b></sub>](https://www.linkedin.com/in/hussam-el-hwary/)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=hussamEL-Hwary "Code") |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [<img src="https://avatars2.githubusercontent.com/u/16390911?v=4" width="110px;" alt="Serge Ledig"/><br /><sub><b>Serge Ledig</b></sub>](http://www.cotiga.fr/)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=cotiga "Code") [🌍](#translation-cotiga "Translation") | [<img src="https://avatars0.githubusercontent.com/u/4799852?v=4" width="110px;" alt="Hennell"/><br /><sub><b>Hennell</b></sub>](https://github.com/hennell-git)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=hennell-git "Code") | [<img src="https://avatars2.githubusercontent.com/u/13354566?v=4" width="110px;" alt="Sawai Chungsri"/><br /><sub><b>Sawai Chungsri</b></sub>](https://github.com/4UForever)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=4UForever "Code") | [<img src="https://avatars1.githubusercontent.com/u/2970005?v=4" width="110px;" alt="Kent Dahl"/><br /><sub><b>Kent Dahl</b></sub>](http://kentdahl.no/)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=kentdahl "Code") | [<img src="https://avatars0.githubusercontent.com/u/25519274?v=4" width="110px;" alt="Lorenzo Sapora"/><br /><sub><b>Lorenzo Sapora</b></sub>](https://sush.us)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=LorenzoSapora "Code") | [<img src="https://avatars2.githubusercontent.com/u/1516273?v=4" width="110px;" alt="D'Silva"/><br /><sub><b>D'Silva</b></sub>](https://github.com/evnix)<br />[💻](https://github.com/jeremykenedy/laravel-auth/commits?author=evnix "Code") | [<img src="https://avatars3.githubusercontent.com/u/22533877?v=4" width="110px;" alt="Nicolas dos Reis Barbosa de Oliveira"/><br /><sub><b>Nicolas dos Reis Barbosa de Oliveira</b></sub>](http://www.linkedin.com/in/nicolasdosreisOliveira)<br />[🌍](#translation-nibri10 "Translation") |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
