@@ -22,9 +22,11 @@
         "jeremykenedy/laravel2step": "^1.1",
         "jeremykenedy/uuid": "^3.1",
         "laravel/framework": "5.8.*",
+        "laravel/passport": "^7.2",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.5",
+        "overtrue/laravel-lang": "~3.0",
         "pusher/pusher-php-server": "^3.0",
         "rap2hpoutre/laravel-log-viewer": "^0.22.1",
         "socialiteproviders/37signals": "^3.0",
@@ -33,7 +35,8 @@
         "socialiteproviders/twitch": "^3.0",
         "socialiteproviders/weixin": "^4.0",
         "socialiteproviders/weixin-web": "^3.0",
-        "socialiteproviders/youtube": "^3.0"
+        "socialiteproviders/youtube": "^3.0",
+        "xutl/laravel-passport-sms": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

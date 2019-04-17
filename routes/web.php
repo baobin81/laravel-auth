@@ -13,6 +13,99 @@
 |
 */
 
+//授权码获得token
+Route::get('/api/redirect', function () {
+    $query = http_build_query([
+        'client_id' => '7',
+        'redirect_uri' => 'http://user.quanjingke.com/auth/callback',
+        'response_type' => 'code',
+        'scope' => '',
+    ]);
+
+    return redirect('http://user.quanjingke.com/oauth/authorize?'.$query);
+});
+
+Route::get('/auth/callback', function (\Illuminate\Http\Request $request){
+
+    $http = new GuzzleHttp\Client;
+
+    $response = $http->post('http://user.quanjingke.com/oauth/token', [
+        'form_params' => [
+            'grant_type' => 'authorization_code',
+            'client_id' => '7',  // your client id
+            'client_secret' => 'aY7Nql0kWWv5NkaGWVMDCBVZdGZRo8f4ySXTCsKJ',   // your client secret
+            'redirect_uri' => 'http://user.quanjingke.com/auth/callback',
+            'code' => $request->code,
+        ],
+    ]);
+
+    return json_decode((string) $response->getBody(), true);
+
+});   
+
+//密码获得授权令牌(用户名+用户密码+应用ID+应用key)
+Route::get('/auth/password', function (\Illuminate\Http\Request $request){
+    $http = new \GuzzleHttp\Client();
+
+    $response = $http->post('http://user.quanjingke.com/oauth/token', [
+        'form_params' => [
+            'grant_type' => 'password',
+            'client_id' => '8',
+            'client_secret' => 'uma4uTOfJEVDy3fRObq3ea0Qgb675KoAn93g0gt8',
+            'username' => 'baobin81@qq.com',
+            'password' => 'baobin123',
+            'scope' => '*',
+        ],
+    ]);
+
+    return json_decode((string)$response->getBody(), true);
+});
+
+
+//隐式授权令牌
+Route::get('/auth/implicit', function () {
+    $query = http_build_query([
+        'client_id' => '7',
+        'redirect_uri' => 'http://user.quanjingke.com/auth/implicit/callback',
+        'response_type' => 'token',
+        'scope' => '',
+    ]);
+
+    return redirect('http://user.quanjingke.com/oauth/authorize?'.$query);
+});
+
+
+//隐式授权回调路由
+Route::get('/auth/implicit/callback', function () {
+     dd($request->get('access_token'));
+});
+
+
+//客户端凭证获得得令牌
+Route::get('/auth/client', function (\Illuminate\Http\Request $request){
+    $http = new \GuzzleHttp\Client();
+
+    $response = $http->post('http://user.quanjingke.com/oauth/token', [
+        'form_params' => [
+            'grant_type' => 'client_credentials',
+            'client_id' => '8',
+            'client_secret' => 'uma4uTOfJEVDy3fRObq3ea0Qgb675KoAn93g0gt8',
+            'scope' => '*',
+        ],
+    ]);
+
+    return json_decode((string)$response->getBody(), true);
+});
+
+//客户端凭证获得得令牌,路由保护
+Route::get('/userinfo', function () {
+    //
+    return "pass";
+
+})->middleware('client');
+
+
+
 // Homepage Route
 Route::group(['middleware' => ['web', 'checkblocked']], function () {
     Route::get('/', 'WelcomeController@welcome')->name('welcome');

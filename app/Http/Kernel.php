@@ -5,6 +5,9 @@ namespace App\Http;
 use App\Http\Middleware\CheckIsUserActivated;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
+use Laravel\Passport\Http\Middleware\CheckClientCredentials;
+
+
 class Kernel extends HttpKernel
 {
     /**
@@ -66,5 +69,8 @@ class Kernel extends HttpKernel
         'permission'    => \jeremykenedy\LaravelRoles\Middleware\VerifyPermission::class,
         'level'         => \jeremykenedy\LaravelRoles\Middleware\VerifyLevel::class,
         'currentUser'   => \App\Http\Middleware\CheckCurrentUser::class,
+        'client.credentials'=>\Laravel\Passport\Http\Middleware\CheckClientCredentials::class,
+        'client' => CheckClientCredentials::class,
+
     ];
 }
